@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro e Gestão de Usuários</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <header>
+        <h1>Cadastro de Usuário</h1>
+        <p>Gerencie usuários com cadastro, edição, exclusão e busca.</p>
+      </header>
+
+      <main class="content">
+        <section class="panel">
+          <h2>Formulário</h2>
+          <form id="formCadastro" novalidate>
+            <div class="field">
+              <label for="nomeInput">Nome completo</label>
+              <input id="nomeInput" name="nome" type="text" placeholder="Seu nome" required minlength="2" />
+            </div>
+            <div class="field">
+              <label for="emailInput">E-mail</label>
+              <input id="emailInput" name="email" type="email" placeholder="voce@exemplo.com" required />
+            </div>
+            <div class="actions">
+              <button class="btn-primary" type="submit">Cadastrar</button>
+              <button class="btn-ghost" type="reset">Limpar</button>
+            </div>
+          </form>
+          <p id="mensagem"></p>
+        </section>
+
+        <aside class="panel">
+          <h2>Usuários Cadastrados</h2>
+          <div class="field">
+            <input type="text" id="buscaInput" placeholder="Buscar por nome..." />
+          </div>
+          <table id="tabelaUsuarios">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Usuários serão carregados aqui pelo JS -->
+            </tbody>
+          </table>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
